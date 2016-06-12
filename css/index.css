@@ -1,0 +1,63 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+@media only screen and (max-width: 760px) {
+    footer{
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    footer{
+        display: none !important;
+    }
+    .btn-floating{
+        display: none !important;
+    }
+}
+
+.gh-icon {
+	top: -50px;
+	margin-left: 20px;
+}
+
+.collapsible {
+	margin-top: -20px;
+	clear: both;
+}
+
+.collapsible-body {
+	padding: 10px;
+	padding-left: 20px;
+}
+
+.details li {
+	list-style-type: circle;
+}
+
+code {
+    word-wrap: break-word;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 60%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
