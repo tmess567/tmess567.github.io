@@ -6,7 +6,12 @@
 			"Added visual changes to github io page",
 			"Designed a console script to open all reddit posts in a new window: <br/> <code>$('a.title').each(function(){window.open(this.href, '_blank')};</code>",
 			"Modified devlogs to be for developer, not for particular project.",
-			"Fixed the footer problem in devlogs and sent PR <a href='https://github.com/karandesai-96/devlog/pull/3' target='_blank'><i class='octicon octicon-git-pull-request'></i> #3</a>"
+			"Fixed the footer problem in devlogs and sent PR <a href='https://github.com/karandesai-96/devlog/pull/3' target='_blank'><i class='octicon octicon-git-pull-request'></i> #3</a>",
+			"Fixed JSON problem <a href='https://github.com/tmess567/tmess567.github.io/commit/e26a1a8fc61f84a49c63da54cfad37bc354fcc8d'><i class='octicon octicon-git-commit'></i>#6</a> <br /><code>Uncaught SyntaxError: Unexpected token o</code><br/> Wasn't showing up when I ran it on my local lampp installation so it took a couple of commit to solve this (Testing was done on the github io page itself.",
+			"Switch workspaces in ubuntu with Ctrl + Alt + arrow Key",
+			"Correcting misspells in syncope reference guide. <a href='https://github.com/tmess567/syncope/commit/ec53d9183faaff5d9d9d1adf364776d996fa3a22' target='_blank'><i class='octicon octicon-git-commit'></i>#19</a> <br /><code>Changed the following:<br />src/main/asciidoc/commondocs/guiinstaller.adoc<br />src/main/asciidoc/concepts/provisioning/provisioning.adoc<br />src/main/asciidoc/iam/accessmanager/accessmanager.adoc<br />src/main/asciidoc/iam/accessmanager/authentication.adoc<br />src/main/asciidoc/iam/iam.adoc<br />src/main/asciidoc/iam/identitystores.adoc<br />src/main/asciidoc/iam/provisioningengines.adoc<br />src/main/asciidoc/introduction/history.adoc</code>",
+			"Got mentioned in a <a href='https://twitter.com/syncopeidm/status/742284836245737472' target='_blank'>tweet</a> by <a href='https://twitter.com/syncopeidm/' target='_blank'>Apache Syncope</a>",
+			"Read about <a href='http://maruos.com' target='_blank'>Maru OS</a> which is going to go open source. Now reading up on <a href='https://source.android.com/source/index.html' target='_blank'>AOSP docs</a> to get ready for trying to port to OPO"
 		]
 
 	}
