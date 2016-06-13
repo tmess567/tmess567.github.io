@@ -3,7 +3,10 @@
 		"date": "13th June",
 		"entries": [
 			"Created github io page and added devlog page",
-			"Added visual changes to github io page"
+			"Added visual changes to github io page",
+			"Designed a console script to open all reddit posts in a new window: <br/> <code>$('a.title').each(function(){window.open(this.href, '_blank')};</code>",
+			"Modified devlogs to be for developer, not for particular project.",
+			"Fixed the footer problem in devlogs and sent PR <a href='https://github.com/karandesai-96/devlog/pull/3' target='_blank'><i class='octicon octicon-git-pull-request'></i> #3</a>"
 		]
 
 	}

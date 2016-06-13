@@ -22,7 +22,6 @@ $.get('posts.json', function(data) {
 			content += preContent + item + postContent;
 		});
 		content += endPosts;
-		console.log("#############Adding \n"+content );
 		$('#postsContainer').append(content);
 		content = "";
 	});

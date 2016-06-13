@@ -3,11 +3,14 @@ html, body {
 	height: 100%;
 }
 
-footer{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main{
+    flex: 1 0 auto;
 }
 
 @media only screen and (max-width: 760px) {
