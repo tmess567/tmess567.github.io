@@ -10,8 +10,7 @@ var postContent = "</li>";
 
 var endPosts = "<br/></ul></div></li>";
 
-$.get('posts.json', function(data) {
-	var posts = $.parseJSON( data );
+$.get('posts.json', function(posts) {
 	var content = "";
 	$.each(posts, function(i, item) {
 		content += (preDate+item.date+postDate);
