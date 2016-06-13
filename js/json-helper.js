@@ -9,19 +9,20 @@ var preContent = "<li><b>";
 var postContent = "</li>";
 
 var endPosts = "<br/></ul></div></li>";
+$( document ).ready(function() {
+	$.get('posts.json', function(posts) {
+		var content = "";
+		$.each(posts, function(i, item) {
+			content += (preDate+item.date+postDate);
+			content += (headPosts);
 
-$.get('posts.json', function(posts) {
-	var content = "";
-	$.each(posts, function(i, item) {
-		content += (preDate+item.date+postDate);
-		content += (headPosts);
-
-		var postsString = "";
-		$.each(item.entries, function(i, item) {
-			content += preContent + item + postContent;
+			var postsString = "";
+			$.each(item.entries, function(i, item) {
+				content += preContent + item + postContent;
+			});
+			content += endPosts;
+			$('#postsContainer').append(content);
+			content = "";
 		});
-		content += endPosts;
-		$('#postsContainer').append(content);
-		content = "";
-	});
-}); 
+	}); 
+});
