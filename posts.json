@@ -14,6 +14,22 @@
 			"Read about <a href='http://maruos.com' target='_blank'>Maru OS</a> which is going to go open source. Now reading up on <a href='https://source.android.com/source/index.html' target='_blank'>AOSP docs</a> to get ready for trying to port to OPO"
 		]
 
+	},
+
+	{
+		"date": "14th June",
+		"entries": [
+			"Helped foobarbecue from meteor irc to fix export problems in js",
+			"Reading about <a href='http://wicket.apache.org/' target='_blank'>Apache Wicket</a> which is used by Apache Syncope for console backend. Even Xbox One store uses this.",
+			"How to create a link to a page (realms in the example below) in syncope (as seen in <a href='https://github.com/apache/syncope/blob/master/client/console/src/main/java/org/apache/syncope/client/console/pages/BasePage.java' target='_blank'>BasePage.java</a>) <br /><code>BookmarkablePageLink<Page> link = BookmarkablePageLinkBuilder.build(\"realms\", Realms.class);<br />MetaDataRoleAuthorizationStrategy.authorize(link, WebPage.ENABLE, StandardEntitlement.REALM_LIST);</code>",
+			"Widgets on the dashboard are made from WebMarkupContainer (See <a href='https://github.com/apache/syncope/blob/master/client/console/src/main/java/org/apache/syncope/client/console/widgets/NumberWidget.java' target='_blank'>NumberWidget.java</a> Line 38)",
+			"Adding mouse down listeners is done by the following code: <br /><code>new AjaxEventBehavior(\"onmousedown\"){<br />&nbsp;&nbsp;&nbsp;&nbsp;@Override <br />&nbsp;&nbsp;&nbsp;&nbsp;protected void onEvent(AjaxRequestTarget target) { ... } <br />}</code>",
+			"<a href='http://issues.apache.org' target='_blank'>Apache issues</a> is down for some reason. See <a href='http://i.imgur.com/vdoEb4U.png' target='_blank'>Screenshot</a> But, down for more than a week? That's not right...",
+			"Issues page works now. Posted an issue, check it out at <a href='https://issues.apache.org/jira/browse/SYNCOPE-871' target='_blank'>SYNCOPE-871</a>.",
+			"Turns out, there are methods in DashboardOverviewPanel named buildTotalAny1OrRoles and buildTotalAny2OrRoles which check if admin has added any objects other than printers and based on that, widgets on the dashboard are generated. I proposed a way to work around this problem in this <a href='https://issues.apache.org/jira/browse/SYNCOPE-871?focusedCommentId=15329064&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-15329064' target='_blank'>comment</a>.",
+			"<code>sudo netstat -plnt | grep ':80'</code> shows the process listening to port 80, <code>fuser -k 8080/tcp</code> kills the process listening to port 8080.",
+			"Started working on a fix for SYNCOPE-871"
+		]
 	}
 
 ]
