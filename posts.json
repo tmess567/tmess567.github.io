@@ -30,6 +30,23 @@
 			"<code>sudo netstat -plnt | grep ':80'</code> shows the process listening to port 80, <code>fuser -k 8080/tcp</code> kills the process listening to port 8080.",
 			"Started working on a fix for SYNCOPE-871"
 		]
+	},
+
+	{
+		"date": "15th June",
+		"entries": [
+			"Added onclick listener to WebMarkupContainer.<code>box.add(new AjaxEventBehavior(\"onmousedown\"){<br />&nbsp;&nbsp;&nbsp;@Override <br />&nbsp;&nbsp;&nbsp;&nbsp;protected void onEvent(AjaxRequestTarget target) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setResponsePage(Realms.class);<br />&nbsp;&nbsp;&nbsp;&nbsp;} <br />});<br />add(box);</code>",
+			"The page to be opened is defined by org.apache.syncope.client.console.pages.Realms . I can open this page with setResponsePage() but I also need to activate the appropriate tab",
+			"Turns out org.apache.syncope.client.console.pages.Realms instantiates org.apache.syncope.client.console.panels.Realm to generate the tabs and the content among them using a method named updateRealmContent().",
+			"The Realm class creates a list of ITab instances which are passed on to AjaxBootstrapTabbedPanel . Fortunately, AjaxBootstrapTabbedPanel has a method named setSelectedTab(), however this only takes the index of tab to be selected.",
+			"Since I need to determine what NumberWidget was clicked in the DashboardOverviewPanel, I will have to overload the constructor of the Realm panel class as well as the updateRealmContent method of the Realms class. The method is quite big and we don't need that kind of code duplication, I will get back to this.",
+			"The parameters can be passed to the opening Realms.java using org.apache.wicket.request.mapper.parameter.PageParameters.",
+			"Minor Problem (Solved immediately with a workaround): How to check if buildTotalAny1OrRoles() or buildTotalAny2OrRoles() methods were able to find types? Answer -> Just check the icon they are returning.",
+			"Still not sure if the tabs generated will be in order details->users->groups->type#1/roles->type#2/resources. Put a comment on the issue",
+			"Continuing, linked type#1->realms[3], roles->org.apache.syncope.client.console.pages.Roles, type#2->realms[4], resources->org.apache.syncope.client.console.topology.Topology, ",
+			"Turns out the types defined are listed in an alphabetical order on the Realms panel but the DashboardOverviewPanel shows them in some other order. Maybe this is an issue, but anyways I'll have to modify NumberWidget to identify the index for the type using it's name. Pretty simple, get all type names and sort them, then add 3 to the index (offset for details, users and groups).",
+			"Completed and created a PR <a href='https://github.com/apache/syncope/pull/20' target='_blank'><i class='octicon octicon-git-pull-request'></i> #20</a>"
+		]
 	}
 
 ]
