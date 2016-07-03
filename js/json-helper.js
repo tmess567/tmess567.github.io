@@ -9,8 +9,17 @@ var preContent = "<li><b>";
 var postContent = "</li>";
 
 var endPosts = "<br/></ul></div></li>";
-$( document ).ready(function() {
-	$.get('posts.json', function(posts) {
+
+  var config = {
+    apiKey: "AIzaSyBdJZcb2XiR4p06n75U1VQdjY_yOSFcbg8",
+    authDomain: "devlog-28bc7.firebaseapp.com",
+    databaseURL: "https://devlog-28bc7.firebaseio.com",
+    storageBucket: "",
+  };
+  firebase.initializeApp(config);
+
+  firebase.database().ref('posts/').on('value', function(snapshot) {
+	  posts = snapshot.val();
 		var content = "";
 		$.each(posts, function(i, item) {
 			content += (preDate+item.date+postDate);
@@ -24,5 +33,5 @@ $( document ).ready(function() {
 			$('#postsContainer').append(content);
 			content = "";
 		});
-	}); 
-});
+		$("div.spinner").hide();
+	});
