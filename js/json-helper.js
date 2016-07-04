@@ -20,6 +20,7 @@ var endPosts = "<br/></ul></div></li>";
 
   firebase.database().ref('posts/').on('value', function(snapshot) {
 	  posts = snapshot.val();
+	  $('#postsContainer').empty();
 		var content = "";
 		$.each(posts, function(i, item) {
 			content += (preDate+item.date+postDate);
